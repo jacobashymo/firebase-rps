@@ -113,24 +113,24 @@ database.ref().on("value", function (snapshot) {
             $("#p2c1").text(p2Choice);
 
             if (theme === 1) {
-                let imgStyle = "3d";
+                var imgStyle = "3d";
                 theme++;
             }
             else if (theme === 2) {
-                let imgStyle = "icon";
+                var imgStyle = "icon";
                 theme++;
             }
             else if (theme === 3) {
-                let imgStyle = "real";
+                var imgStyle = "real";
                 theme++;
             }
             else {
-                let imgStyle = "bathroom";
+                var imgStyle = "bathroom";
                 theme = 1;
             }
 
-            $("#p1Image").html('<img src="',imgStyle + p1Choice + '.png" alt="' + p1Choice + '" class="img img-responsive" />');
-            $("#p2Image").html('<img src="',imgStyle + p2Choice + '.png" alt="' + p2Choice + '" class="img img-responsive" />');
+            $("#p1Image").html('<img src="'+imgStyle + p1Choice + '.png" alt="' + p1Choice + '" class="img img-responsive" />');
+            $("#p2Image").html('<img src="'+imgStyle + p2Choice + '.png" alt="' + p2Choice + '" class="img img-responsive" />');
 
             if ((p1Choice === "Rock" && p2Choice === "Scissors") || (p1Choice === "Paper" && p2Choice === "Rock") || (p1Choice === "Scissors" && p2Choice === "Paper")) {
                 $("#gameStats").text("Player 1 wins!");
